@@ -23,7 +23,7 @@ export function Skills() {
         {SKILLS_DATA.map((category) => (
           <Card
             key={category.category}
-            className="transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+            className="transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:backdrop-blur-lg"
           >
             <CardHeader className="flex flex-row items-center gap-4 pb-4">
               <category.icon className="h-8 w-8 text-accent" />

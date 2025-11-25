@@ -30,7 +30,7 @@ export function Experience() {
               <div className="absolute -left-3 top-1 z-10 flex h-6 w-6 items-center justify-center rounded-full bg-background ring-8 ring-background">
                 <Briefcase className="h-5 w-5 text-primary" />
               </div>
-              <Card className="transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <Card className="transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:backdrop-blur-lg">
                 <CardHeader>
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                     <CardTitle className="text-xl">{item.title}</CardTitle>
