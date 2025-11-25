@@ -28,7 +28,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-primary"
           >
             <Github className="h-6 w-6" />
             <span className="sr-only">GitHub</span>
@@ -38,7 +38,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-primary"
           >
             <Linkedin className="h-6 w-6" />
             <span className="sr-only">LinkedIn</span>

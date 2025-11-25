@@ -49,7 +49,7 @@ export function Contact() {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 Send Message <Send className="ml-2 h-4 w-4" />
               </Button>
@@ -65,27 +65,27 @@ export function Contact() {
           <div className="flex flex-col space-y-4 pt-4">
             <a
               href={SOCIAL_LINKS.email}
-              className="group flex items-center gap-3 text-lg transition-colors hover:text-accent"
+              className="group flex items-center gap-3 text-lg transition-colors hover:text-primary"
             >
-              <Mail className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-accent" />
+              <Mail className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-primary" />
               <span>contact@example.com</span>
             </a>
             <a
               href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-lg transition-colors hover:text-accent"
+              className="group flex items-center gap-3 text-lg transition-colors hover:text-primary"
             >
-              <Linkedin className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-accent" />
+              <Linkedin className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-primary" />
               <span>LinkedIn Profile</span>
             </a>
             <a
               href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-lg transition-colors hover:text-accent"
+              className="group flex items-center gap-3 text-lg transition-colors hover:text-primary"
             >
-              <Github className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-accent" />
+              <Github className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-primary" />
               <span>GitHub Profile</span>
             </a>
           </div>

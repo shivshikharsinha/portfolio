@@ -18,7 +18,7 @@ export function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Icons.logo className="h-6 w-6" />
             <span className="font-bold sm:inline-block">
-              JavaCraft Portfolio
+              Shiv Shikhar Sinha
             </span>
           </Link>
           <nav className="hidden gap-6 md:flex">
