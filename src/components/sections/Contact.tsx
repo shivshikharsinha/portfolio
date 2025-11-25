@@ -81,7 +81,7 @@ export function Contact({ className }: { className?: string }) {
       </div>
 
       <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
-        <Card className="transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:backdrop-blur-lg">
+        <Card className="transform-gpu rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:backdrop-blur-lg">
           <CardHeader>
             <CardTitle>Send a Message</CardTitle>
             <CardDescription>
@@ -153,7 +153,7 @@ export function Contact({ className }: { className?: string }) {
             </Form>
           </CardContent>
         </Card>
-        <div className="flex flex-col items-center justify-center space-y-6 rounded-xl bg-card/50 p-8 text-center shadow-sm backdrop-blur-xl transition-all duration-300 hover:backdrop-blur-lg md:items-start">
+        <div className="flex flex-col items-center justify-center space-y-6 rounded-lg bg-card/50 p-8 text-center shadow-sm backdrop-blur-xl transition-all duration-300 hover:backdrop-blur-lg md:items-start">
           <h3 className="text-xl font-semibold">Contact Information</h3>
           <p className="text-center text-muted-foreground md:text-left">
             Alternatively, you can contact me via email or connect with me on
