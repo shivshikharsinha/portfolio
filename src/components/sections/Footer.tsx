@@ -15,7 +15,7 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-background">
-      <div className="container flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
+      <div className="container flex flex-col items-center justify-between gap-4 px-4 py-8 sm:px-6 md:flex-row lg:px-8">
         <div className="flex items-center gap-2">
           <Icons.logo className="h-6 w-6 text-primary" />
           <p className="text-sm text-muted-foreground">
