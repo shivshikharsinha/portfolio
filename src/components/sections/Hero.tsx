@@ -9,7 +9,7 @@ export function Hero() {
     >
       <div className="max-w-4xl">
         <h1 className="text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl lg:text-7xl">
-          Hi, I am Shiv Shikhar Sinha.
+          Hi, I'm Shiv Shikhar Sinha.
         </h1>
         <p className="mx-auto mt-6 max-w-[700px] text-lg text-foreground/80 md:text-xl">
           A passionate Java Software Engineer with expertise in creating robust,

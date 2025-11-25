@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,8 +13,61 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { SOCIAL_LINKS } from "@/lib/data";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
+import { sendMessage } from "@/ai/flows/sendMessageFlow";
+
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email." }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters." }),
+});
 
 export function Contact() {
+  const { toast } = useToast();
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await sendMessage(values);
+      if (response.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Failed to send message.");
+      }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: "There was a problem with your request. Please try again.",
+      });
+    }
+  }
+
   return (
     <section id="contact" className="container py-16 sm:py-24">
       <div className="mb-12 text-center">
@@ -20,8 +75,8 @@ export function Contact() {
           Get In Touch
         </h2>
         <p className="mx-auto mt-4 max-w-[700px] text-foreground/80 md:text-xl/relaxed">
-          I&apos;m open to new opportunities and collaborations. Feel free to reach
-          out.
+          I&apos;m open to new opportunities and collaborations. Feel free to
+          reach out.
         </p>
       </div>
 
@@ -34,29 +89,71 @@ export function Contact() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your Name" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="Your Email" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" placeholder="Your Message" rows={5} />
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-4"
               >
-                Send Message <Send className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your Name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="email"
+                          placeholder="Your Email"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Your Message"
+                          rows={5}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                  disabled={form.formState.isSubmitting}
+                >
+                  {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+                  <Send className="ml-2 h-4 w-4" />
+                </Button>
+              </form>
+            </Form>
           </CardContent>
         </Card>
-        <div className="flex flex-col items-center justify-center space-y-6 rounded-lg bg-card p-8 text-center shadow-sm md:items-start">
+        <div className="flex flex-col items-center justify-center space-y-6 rounded-xl bg-card/50 p-8 text-center shadow-sm backdrop-blur-xl transition-all duration-300 hover:backdrop-blur-lg md:items-start">
           <h3 className="text-xl font-semibold">Contact Information</h3>
           <p className="text-center text-muted-foreground md:text-left">
             Alternatively, you can contact me via email or connect with me on
