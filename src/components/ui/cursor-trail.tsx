@@ -63,7 +63,7 @@ export function CursorTrail() {
             key={index}
             className="pointer-events-none absolute h-6 w-6 rounded-full bg-accent/50 backdrop-blur-sm"
             style={{
-              left: `${point.x}px`, // Positioned to the right of the cursor
+              left: `${point.x - 24}px`, // Positioned to the left of the cursor
               top: `${point.y - 12}px`, // Centered vertically
               opacity: opacity,
               transform: `scale(${scale})`,
