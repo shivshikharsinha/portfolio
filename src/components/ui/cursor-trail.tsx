@@ -1,9 +1,10 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
 
-const trailLength = 25;
-const updateRate = 25; // ms
+const trailLength = 15; // Reduced length for a more subtle trail
+const updateRate = 20; // Faster update rate for smoother tracking
 
 export function CursorTrail() {
   const [points, setPoints] = useState(
@@ -34,8 +35,8 @@ export function CursorTrail() {
           if (index === 0) return point;
           const prevPoint = arr[index - 1];
           return {
-            x: point.x + (prevPoint.x - point.x) * 0.5,
-            y: point.y + (prevPoint.y - point.y) * 0.5,
+            x: point.x + (prevPoint.x - point.x) * 0.7, // Tighter follow
+            y: point.y + (prevPoint.y - point.y) * 0.7, // Tighter follow
           };
         });
         return newPoints;
@@ -62,8 +63,8 @@ export function CursorTrail() {
             key={index}
             className="pointer-events-none absolute h-6 w-6 rounded-full bg-accent/50 backdrop-blur-sm"
             style={{
-              left: `${point.x - 12}px`,
-              top: `${point.y - 12}px`,
+              left: `${point.x}px`, // Positioned to the right of the cursor
+              top: `${point.y - 12}px`, // Centered vertically
               opacity: opacity,
               transform: `scale(${scale})`,
               transition: "transform 0.1s, opacity 0.1s",
