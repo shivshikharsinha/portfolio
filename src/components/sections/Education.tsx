@@ -5,9 +5,9 @@ import {
 } from "@/components/ui/card";
 import { EDUCATION_DATA } from "@/lib/data";
 
-export function Education() {
+export function Education({ className }: { className?: string }) {
   return (
-    <section id="education" className="container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <section id="education" className={className}>
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
@@ -21,7 +21,7 @@ export function Education() {
           {EDUCATION_DATA.map((item) => (
             <Card
               key={item.title}
-              className="flex items-center gap-4 p-6 transition-all duration-300 hover:shadow-lg"
+              className="flex items-center gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:backdrop-blur-lg"
             >
               <item.icon className="h-10 w-10 shrink-0 text-accent" />
               <div>

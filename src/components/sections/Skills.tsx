@@ -7,9 +7,9 @@ import {
 } from "@/components/ui/card";
 import { SKILLS_DATA } from "@/lib/data";
 
-export function Skills() {
+export function Skills({ className }: { className?: string }) {
   return (
-    <section id="skills" className="container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <section id="skills" className={className}>
       <div className="mb-12 text-center">
         <h2 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
           Skills Dashboard
@@ -23,7 +23,7 @@ export function Skills() {
         {SKILLS_DATA.map((category) => (
           <Card
             key={category.category}
-            className="transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:backdrop-blur-lg"
+            className="transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:backdrop-blur-lg"
           >
             <CardHeader className="flex flex-row items-center gap-4 pb-4">
               <category.icon className="h-8 w-8 text-accent" />

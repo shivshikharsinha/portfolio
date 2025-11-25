@@ -35,7 +35,7 @@ const formSchema = z.object({
     .min(10, { message: "Message must be at least 10 characters." }),
 });
 
-export function Contact() {
+export function Contact({ className }: { className?: string }) {
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -69,7 +69,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <section id="contact" className={className}>
       <div className="mb-12 text-center">
         <h2 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
           Get In Touch
@@ -81,7 +81,7 @@ export function Contact() {
       </div>
 
       <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
-        <Card>
+        <Card className="transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:backdrop-blur-lg">
           <CardHeader>
             <CardTitle>Send a Message</CardTitle>
             <CardDescription>

@@ -11,9 +11,9 @@ import {
 import { PROJECTS_DATA } from "@/lib/data";
 import { ExternalLink, Github } from "lucide-react";
 
-export function Projects() {
+export function Projects({ className }: { className?: string }) {
   return (
-    <section id="projects" className="container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <section id="projects" className={className}>
       <div className="mb-12 text-center">
         <h2 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
           Featured Projects
@@ -27,7 +27,7 @@ export function Projects() {
         {PROJECTS_DATA.map((project) => (
           <Card
             key={project.title}
-            className="flex h-full flex-col overflow-hidden transition-all duration-300 hover:shadow-xl"
+            className="flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:backdrop-blur-lg"
           >
             <CardHeader>
               <CardTitle className="text-xl">{project.title}</CardTitle>
