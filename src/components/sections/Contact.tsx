@@ -68,7 +68,7 @@ export function Contact() {
               className="group flex items-center gap-3 text-lg transition-colors hover:text-primary"
             >
               <Mail className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-primary" />
-              <span>contact@example.com</span>
+              <span>shiv.shikhar.3@gmail.com</span>
             </a>
             <a
               href={SOCIAL_LINKS.linkedin}

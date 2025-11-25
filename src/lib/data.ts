@@ -23,7 +23,7 @@ export const SKILLS_DATA = [
   {
     category: "Languages",
     icon: Code2,
-    skills: ["Java", "SQL", "Python", "JavaScript", "TypeScript"],
+    skills: ["Java", "SQL", "JavaScript", "TypeScript"],
   },
   {
     category: "Frameworks",
@@ -44,9 +44,9 @@ export const SKILLS_DATA = [
 
 export const EXPERIENCE_DATA = [
   {
-    title: "Senior Java Developer",
-    company: "Tech Solutions Inc.",
-    date: "Jan 2021 - Present",
+    title: "Software Engineer",
+    company: "Newgen Software",
+    date: "July 2024 - Present",
     description:
       "Leading the design and development of microservices-based architecture for enterprise-level applications.",
     achievements: [
@@ -56,27 +56,15 @@ export const EXPERIENCE_DATA = [
     ],
   },
   {
-    title: "Software Engineer",
-    company: "Innovatech Ltd.",
-    date: "Jun 2018 - Dec 2020",
+    title: "Software Engineer Trainee",
+    company: "INewgen Software",
+    date: "Jan 2024 - June 2024",
     description:
       "Developed and maintained backend services for a high-traffic e-commerce platform.",
     achievements: [
       "Contributed to a 25% increase in application performance by implementing caching strategies with Redis.",
       "Developed RESTful APIs for new product features, serving over 1 million daily requests.",
       "Participated in the migration of monolithic application to a microservices architecture on AWS.",
-    ],
-  },
-  {
-    title: "Junior Software Developer",
-    company: "CodeCrafters Co.",
-    date: "Jul 2016 - May 2018",
-    description:
-      "Assisted in the development of various Java-based web applications.",
-    achievements: [
-      "Wrote and maintained unit and integration tests, increasing code coverage by 15%.",
-      "Fixed over 200 bugs and contributed to feature development in a large-scale enterprise application.",
-      "Gained proficiency in Spring Framework, Hibernate, and agile development methodologies.",
     ],
   },
 ];
@@ -119,15 +107,15 @@ export const PROJECTS_DATA = [
 export const EDUCATION_DATA = [
   {
     icon: GraduationCap,
-    title: "M.S. in Computer Science",
-    institution: "Georgia Institute of Technology",
-    date: "2016",
+    title: "B.Tech in Computer Science",
+    institution: "Noida Institute of Engineering & Technology, Greater Noida",
+    date: "2024",
   },
   {
     icon: GraduationCap,
-    title: "B.S. in Software Engineering",
-    institution: "University of Example",
-    date: "2014",
+    title: "Intermediate",
+    institution: "Shivam Convent,\n Patna",
+    date: "2020",
   },
   {
     icon: Award,
@@ -146,5 +134,5 @@ export const EDUCATION_DATA = [
 export const SOCIAL_LINKS = {
   github: "https://github.com",
   linkedin: "https://linkedin.com",
-  email: "mailto:contact@example.com",
+  email: "mailto:shiv.shikhar.3@gmail.com",
 };

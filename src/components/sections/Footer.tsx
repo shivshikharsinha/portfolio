@@ -19,7 +19,7 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <Icons.logo className="h-6 w-6 text-primary" />
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} JavaCraft Portfolio. All rights reserved.
+            &copy; {currentYear} The Tech Freak. All rights reserved.
           </p>
         </div>
         <div className="flex items-center gap-4">
