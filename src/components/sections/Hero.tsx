@@ -21,17 +21,17 @@ export function Hero() {
         <Button
           asChild
           size="lg"
-          className="bg-accent text-accent-foreground transition-transform duration-300 hover:scale-105 hover:bg-accent/90"
+          className="w-full bg-accent text-accent-foreground transition-transform duration-300 hover:scale-105 hover:bg-accent/90 sm:w-auto"
         >
           <a href="#projects">View Projects</a>
         </Button>
-        <Button asChild size="lg" variant="secondary" className="transition-transform duration-300 hover:scale-105">
+        <Button asChild size="lg" variant="secondary" className="w-full transition-transform duration-300 hover:scale-105 sm:w-auto">
           <a href="#contact">
             Contact Me
             <Send className="ml-2 h-4 w-4" />
           </a>
         </Button>
-        <Button asChild size="lg" variant="outline" className="transition-transform duration-300 hover:scale-105">
+        <Button asChild size="lg" variant="outline" className="w-full transition-transform duration-300 hover:scale-105 sm:w-auto">
           <a href="/resume.pdf" download>
             Download Resume
             <Download className="ml-2 h-4 w-4" />

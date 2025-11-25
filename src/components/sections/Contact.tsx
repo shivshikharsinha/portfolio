@@ -56,9 +56,9 @@ export function Contact() {
             </form>
           </CardContent>
         </Card>
-        <div className="flex flex-col items-center justify-center space-y-6 rounded-lg bg-card p-8 shadow-sm">
+        <div className="flex flex-col items-center justify-center space-y-6 rounded-lg bg-card p-8 text-center shadow-sm md:items-start">
           <h3 className="text-xl font-semibold">Contact Information</h3>
-          <p className="text-center text-muted-foreground">
+          <p className="text-center text-muted-foreground md:text-left">
             Alternatively, you can contact me via email or connect with me on
             social media.
           </p>
