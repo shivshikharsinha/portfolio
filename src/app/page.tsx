@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 px-4 sm:px-10 lg:px-16">
+      <main className="flex-1">
         <Hero />
         <Skills />
         <Experience />

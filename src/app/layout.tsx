@@ -1,11 +1,18 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from '@/components/theme-provider';
 
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+
 export const metadata: Metadata = {
-  title: 'JavaCraft Portfolio | Software Engineer',
-  description: 'Portfolio of a Software Engineer specializing in Java and building scalable backend systems.',
+  title: 'Shiv Shikhar Sinha | Software Engineer',
+  description: 'Portfolio of Shiv Shikhar Sinha, a Software Engineer specializing in Java, Spring Boot, and building scalable backend systems with modern cloud technologies.',
+  keywords: ['Java Developer', 'Software Engineer', 'Backend Developer', 'Spring Boot', 'Microservices', 'Cloud', 'React', 'Next.js'],
+  authors: [{ name: 'Shiv Shikhar Sinha' }],
+  creator: 'Shiv Shikhar Sinha',
+  publisher: 'Shiv Shikhar Sinha',
 };
 
 export default function RootLayout({
@@ -15,12 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased">
+      <body className={`${inter.variable} font-body antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

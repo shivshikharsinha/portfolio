@@ -1,25 +1,17 @@
-"use client";
-
-import * as React from "react";
 import { SOCIAL_LINKS } from "@/lib/data";
 import { Github, Linkedin } from "lucide-react";
 import { Icons } from "../icons";
 
 export function Footer() {
-  const [currentYear, setCurrentYear] = React.useState(new Date().getFullYear());
-
-  React.useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
-
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t bg-background">
-      <div className="container flex flex-col items-center justify-between gap-4 px-4 py-8 sm:px-6 md:flex-row lg:px-8">
+      <div className="container flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
         <div className="flex items-center gap-2">
           <Icons.logo className="h-6 w-6 text-primary" />
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} The Tech Freak. All rights reserved.
+            &copy; {currentYear} Shiv Shikhar Sinha. All rights reserved.
           </p>
         </div>
         <div className="flex items-center gap-4">

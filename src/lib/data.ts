@@ -57,7 +57,7 @@ export const EXPERIENCE_DATA = [
   },
   {
     title: "Software Engineer Trainee",
-    company: "INewgen Software",
+    company: "Newgen Software",
     date: "Jan 2024 - June 2024",
     description:
       "Developed and maintained backend services for a high-traffic e-commerce platform.",
