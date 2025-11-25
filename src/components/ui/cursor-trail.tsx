@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 
-const trailLength = 15;
-const updateRate = 15; // ms
+const trailLength = 25;
+const updateRate = 25; // ms
 
 export function CursorTrail() {
   const [points, setPoints] = useState(
