@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { NAV_LINKS } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -56,11 +56,6 @@ export function Header() {
                     <Icons.logo className="h-6 w-6" />
                     <span className="font-bold">JavaCraft Portfolio</span>
                   </Link>
-                  <SheetTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-7 w-7">
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </SheetTrigger>
                 </div>
                 <div className="flex flex-col gap-4 pt-6">
                   {NAV_LINKS.map((link) => (
