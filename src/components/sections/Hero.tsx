@@ -1,12 +1,16 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Download, Send } from "lucide-react";
+import { CursorTrail } from "@/components/ui/cursor-trail";
 
 export function Hero() {
   return (
     <section
       id="about"
-      className="container flex flex-col items-center justify-center px-4 py-20 text-center sm:px-6 md:py-32 lg:px-8"
+      className="relative container flex flex-col items-center justify-center px-4 py-20 text-center sm:px-6 md:py-32 lg:px-8 overflow-hidden"
     >
+      <CursorTrail />
       <div className="max-w-4xl">
         <h1 className="text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl lg:text-7xl">
           Hi, I&apos;m Shiv Shikhar Sinha.
