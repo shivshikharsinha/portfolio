@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="about"
-      className="relative container flex flex-col items-center justify-center px-4 py-20 text-center sm:px-6 md:py-32 lg:px-8 overflow-hidden"
+      className="relative container flex min-h-[calc(100vh-80px)] flex-col items-center justify-center px-4 py-20 text-center sm:px-6 md:py-32 lg:px-8 overflow-hidden"
     >
       <CursorTrail />
       <div className="max-w-4xl">
