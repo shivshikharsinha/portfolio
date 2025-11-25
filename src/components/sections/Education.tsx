@@ -7,7 +7,7 @@ import { EDUCATION_DATA } from "@/lib/data";
 
 export function Education() {
   return (
-    <section id="education" className="py-16 sm:py-24">
+    <section id="education" className="container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">

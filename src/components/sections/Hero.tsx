@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       id="about"
-      className="container flex flex-col items-center justify-center py-20 text-center md:py-32"
+      className="container flex flex-col items-center justify-center px-4 py-20 text-center sm:px-6 md:py-32 lg:px-8"
     >
       <div className="max-w-4xl">
         <h1 className="text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl lg:text-7xl">
