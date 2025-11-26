@@ -10,8 +10,19 @@ export function CursorTrail() {
   const [points, setPoints] = useState(
     Array(trailLength).fill({ x: -100, y: -100 })
   );
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    if (window.innerWidth < 768) {
+      return;
+    }
+
     let lastUpdateTime = 0;
     let animationFrameId: number;
 
@@ -48,10 +59,17 @@ export function CursorTrail() {
     animationFrameId = requestAnimationFrame(animateTrail);
 
     return () => {
+      window.removeEventListener('resize', checkMobile);
       window.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
   }, []);
+
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <>
