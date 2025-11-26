@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Download, Send } from "lucide-react";
+impor, Send } from "lucide-react";
 import { CursorTrail } from "@/components/ui/cursor-trail";
 
 export function Hero() {
